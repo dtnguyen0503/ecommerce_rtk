@@ -5,12 +5,14 @@ import { addItemToCart } from './CartSlice';//Action to add product to cart
 
 
 
-const ProductList = () => { // Initialize the dispatch
+const ProductList = () => { // Initialize the dispatch function to send actions to the Redux store
 
     const dispatch = useDispatch();
    
+    // Access the current cart items from global Redux state
     const cartItems = useSelector(state => state.cart.cartItems); // Get cart items globally
- 
+    
+    // Sample list of products
     const products = [
     { id: 1, name: 'Product A', price: 60 },
     { id: 2, name: 'Product B', price: 75 },
